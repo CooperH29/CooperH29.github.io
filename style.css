@@ -1,28 +1,6 @@
-main {
-  display: grid;
-  grid-template-columns: minmax(220px, 1fr) minmax(420px, 1.6fr);
-  align-items: center;
-  min-height: calc(100vh - 160px);
-  gap: clamp(32px, 5vw, 80px);
-}
-
-.sidebar {
-  width: 100%;
-}
-
-.content {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 12px;
-}
-* {
-  box-sizing: border-box;
-}
-
 body {
     background: rgb(11, 56, 128);
-    color: black;
+    color: rgb(45, 45, 45);
     padding: 10px;
     font-family: Arial, sans-serif;
 }
@@ -80,55 +58,35 @@ a:hover, a:active {
   color: white;
 }
 
-#all-contents {
-  max-width: 1500px;
-  min-height: 100vh;
-  margin: 0 auto;
-  padding: 32px 40px;
+/* main container area beneath menu */
+main {
+    background: rgb(255, 136, 0);
+    display: flex;
+    margin-top: 20px;
+    border: 4px black ridge;
 }
-/* Portfolio styles */
-.content h1 {
-color: black;
-}
-#portfolio {
-list-style: none;
-margin: 0;
-padding: 0;
-width: 100%;
-display: flex;
-flex-direction: column;
-gap: 8px;
-}
-#portfolio li {
-border-radius: 12px;
-overflow: hidden;
-}
-#portfolio a {
-display: flex;
-justify-content: space-between;
-align-items: center;
-text-decoration: underlined;
-color: black;
-padding: 16px 20px;
-font-size: 1.1rem;
-font-weight: 500;
-background: rgb(255, 136, 0);
-border: 4px ridge rgb(11, 56, 128);
-border-radius: 12px;
-transition: background 0.25s ease, color 0.25s ease, transform 0.25s ease;
-}
-#portfolio a:hover {
- background-color: rgb(11, 56, 128);
-color: #fff;
-transform: translateX(4px);
-}
-#portfolio a::after {
-content: "->";
-font-size: 0.85rem;
-opacity: 0.4;
-transition: opacity 0.25s ease;
 
-white-space: nowrap;
+.sidebar {
+    margin-right: 25px;
+    padding: 10px;
 }
-#portfolio a:hover::after {
-opacity: 1
+
+.sidebar-img {
+    width: 200px;
+}
+
+.content {
+    flex: 1;
+    padding: 15px;
+}
+
+/* interests section styles */
+#interests {
+    border: 4px black ridge;
+    padding: 8px;
+    margin-top: 20px;
+}
+
+h2, h3 {
+    margin: 0px;
+}
