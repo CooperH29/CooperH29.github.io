@@ -1,48 +1,53 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <title>Bouncing Box</title>
-    <script src="jquery.min.js"></script>
-    <style>
-      .box {
-        width: 70px;
-        height: 70px;
-        background-color: teal;
 
-        font-size: 300%;
-        text-align: center;
-        user-select: none;
-        display: block;
-        position: absolute;
-        top: 100px;
-        /* Change me! */
-        left: 0px;
-      }
+<head>
+  <meta charset="utf-8" />
+  <title>Bouncing Box</title>
+  <script src="jquery.min.js"></script>
+  <style>
+    .box {
+      width: 70px;
+      height: 70px;
+      background-image: url("images/library-seasonal_halloween_ghost_cute-watermarked-removebg-preview.png");
+      background-size: contain;
 
-      .board {
-        height: 100vh;
-        /* background-color: black; */
-       background-image: url("https://media.istockphoto.com/id/1210547945/vector/dark-halloween-house-with-moon.jpg?s=612x612&w=0&k=20&c=talUrnoaNj4adDyV9JFAuT-EXvJoyOApJFGQcH1XZXw=");
-       
-      }
-    </style>
-    <!-- 	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script> -->
-  </head>
 
-  <body class="board">
-    <!-- HTML for the box -->
-    <div class="box">?</div>
+      font-size: 300%;
+      text-align: center;
+      user-select: none;
+      display: block;
+      position: absolute;
+      top: 100px;
+      /* Change me! */
+      left: 0px;
+    }
 
-    <script>
-      (function () {
-        "use strict";
-        /* global jQuery */
+    .board {
+      height: 100vh;
+      /* background-color: black; */
+      background-image: url("images/hauntedMansion.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
 
-        //////////////////////////////////////////////////////////////////
-        /////////////////// SETUP DO NOT DELETE //////////////////////////
-        //////////////////////////////////////////////////////////////////
-      
+    }
+  </style>
+  <!-- 	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script> -->
+</head>
+
+<body class="board">
+  <!-- HTML for the box -->
+  <div class="box">?</div>
+
+  <script>
+    (function () {
+      "use strict";
+      /* global jQuery */
+
+      //////////////////////////////////////////////////////////////////
+      /////////////////// SETUP DO NOT DELETE //////////////////////////
+      //////////////////////////////////////////////////////////////////
+
       var box = jQuery(".box"); // reference to the HTML .box element
       var board = jQuery(".board"); // reference to the HTML .board element
       var boardWidth = board.width(); // the maximum X-Coordinate of the screen
