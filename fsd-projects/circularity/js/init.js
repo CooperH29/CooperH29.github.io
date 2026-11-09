@@ -25,15 +25,24 @@ var init = function (window) {
       view.addChild(circle);
       circles.push(circle);
     }
-
+Gamification.init({
+    canvas: canvas,
+    view: view,
+    draw: draw,
+    physikz: physikz,
+    circles: circles,
+    game: game
+});
     // TODO 3 : Call the drawCircle() function
-    drawCircle();
-    drawCircle();
-    drawCircle();
-    drawCircle();
-    drawCircle();
+    // drawCircle();
+    // drawCircle();
+    // drawCircle();
+    // drawCircle();
+    // drawCircle();
     // TODO 7 : Use a loop to create multiple circles
-
+    for (var i = 0; i < 50; i++) {
+ drawCircle(i);
+}
     ///////////////////
     // PROGRAM LOGIC //
     ///////////////////
@@ -45,22 +54,28 @@ var init = function (window) {
         */
     function update() {
       // TODO 4 : Update the position of each circle using physikz.updatePosition()
-      physikz.updatePosition(circles[0]);
-      physikz.updatePosition(circles[1]);
-      physikz.updatePosition(circles[2]);
-      physikz.updatePosition(circles[3]);
-      physikz.updatePosition(circles[4]);
+      for (var i = 0; i < 50; i++) {
+ physikz.updatePosition(circles[i]);
+}
+      // physikz.updatePosition(circles[0]);
+      // physikz.updatePosition(circles[1]);
+      // physikz.updatePosition(circles[2]);
+      // physikz.updatePosition(circles[3]);
+      // physikz.updatePosition(circles[4]);
 
       // TODO 5 : Call game.checkCirclePosition() on your circles
-      game.checkCirclePosition(circles[0]);
-      game.checkCirclePosition(circles[1]);
-      game.checkCirclePosition(circles[2]);
-      game.checkCirclePosition(circles[3]);
-      game.checkCirclePosition(circles[4]);
+      for (var i = 0; i < 50; i++) {
+ game.checkCirclePosition(circles[i]);
+}
+      // game.checkCirclePosition(circles[0]);
+      // game.checkCirclePosition(circles[1]);
+      // game.checkCirclePosition(circles[2]);
+      // game.checkCirclePosition(circles[3]);
+      // game.checkCirclePosition(circles[4]);
 
       // TODO 8 / TODO 9 : Iterate over the array
     }
-
+Gamification.update();
     /* 
         This Function should check the position of a circle that is passed to the 
         Function. If that circle drifts off the screen, this Function should move
